@@ -14,6 +14,7 @@ import {CourseTitleComponent} from './course-title/course-title.component';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+    title = "Angular Guru";
 
     courses: Course[] = COURSES;
 
@@ -45,6 +46,10 @@ export class AppComponent implements OnInit {
             .subscribe(
                 () => console.log('Course Saved!')
             );
+    }
+
+    onInputKeyUp(value: string) {
+        this.title = value;
     }
 
 

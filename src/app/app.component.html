@@ -14,6 +14,16 @@
 
   </div>
 
+  <div>
+    <h2>Two Way Binding without ngModel</h2>
+    {{title}}
+    <input 
+      type="text" 
+      [value]="title"
+      (keyup)="onInputKeyUp(inputTitle.value)"
+      #inputTitle>
+  </div>
+
   <div class="courses">
 
     <course-card *ngFor="let course of  courses  "
